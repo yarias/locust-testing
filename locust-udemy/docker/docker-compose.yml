@@ -1,0 +1,58 @@
+version: "3.5"
+services:
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb_container
+    restart: always
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=yermi
+      - DOCKER_INFLUXDB_INIT_PASSWORD=admin123
+      - DOCKER_INFLUXDB_INIT_ORG=My_Org
+      - DOCKER_INFLUXDB_INIT_BUCKET=My_Bucket
+      - DOCKER_INFLUXDB_INIT_RETENTION=1w
+    ports:
+      - "8086:8086"
+    networks:
+      - influxdb_grafana
+    volumes:
+      - influxdb-volume:/var/lib/influxdb2
+      - influxdb-volume:/etc/influxdb2
+  grafana:
+    image: grafana/grafana
+    container_name: grafana_container
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - influxdb_grafana
+    volumes:
+      - grafana-volume:/var/lib/grafana
+  telegraf:
+    image: telegraf:latest
+    pid: "host"
+    container_name: telegraf_container
+    ports:
+      - "8092:8092"
+      - "8094:8094"
+      - "8125:8125"
+    networks:
+      - influxdb_grafana
+    volumes:
+      - /Users/yermi/own/own_repos/locust-udemy/docker/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /sys:/host/sys:ro
+      - /proc:/host/proc:ro
+      - /etc:/host/etc:ro
+    environment:
+      - HOST_PROC=/host/proc
+      - HOST_SYS=/host/sys
+      - HOST_ETC=/host/etc
+    restart: always
+networks:
+  influxdb_grafana:
+volumes:
+  grafana-volume:
+    external: true
+  influxdb-volume:
+    external: true

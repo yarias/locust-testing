@@ -1,0 +1,237 @@
+[2022-04-05 20:17:57,821] Yermis-MacBook-Pro.local/INFO/locust.main: Starting web interface at http://0.0.0.0:8089 (accepting connections from all network interfaces)
+[2022-04-05 20:17:57,836] Yermis-MacBook-Pro.local/INFO/locust.main: Starting Locust 2.8.2
+[2022-04-05 20:18:10,317] Yermis-MacBook-Pro.local/INFO/locust.runners: Ramping to 1 users at a rate of 1.00 per second
+[2022-04-05 20:18:10,317] Yermis-MacBook-Pro.local/INFO/locust.runners: All users spawned: {"MyUser": 1} (1 total users)
+[2022-04-05 20:18:10,318] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Logged into Library Web site
+[2022-04-05 20:18:10,331] Yermis-MacBook-Pro.local/ERROR/locust.user.task: [Errno Expecting value] : 0
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 309, in run
+    self.execute_next_task()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 334, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 444, in execute_task
+    task(self.user).run()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 294, in run
+    self.on_start()
+  File "/Users/yermi/own/own_repos/locust-udemy/locustfiles/03_load_testing_environments/04_basic_logging.py", line 22, in on_start
+    resp = user_resp.json() # Convert JSON response into a dictionary
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+[2022-04-05 20:18:13,865] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Logged into Library Web site
+[2022-04-05 20:18:13,869] Yermis-MacBook-Pro.local/ERROR/locust.user.task: [Errno Expecting value] : 0
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 309, in run
+    self.execute_next_task()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 334, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 444, in execute_task
+    task(self.user).run()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 294, in run
+    self.on_start()
+  File "/Users/yermi/own/own_repos/locust-udemy/locustfiles/03_load_testing_environments/04_basic_logging.py", line 22, in on_start
+    resp = user_resp.json() # Convert JSON response into a dictionary
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+[2022-04-05 20:18:16,847] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Logged into Library Web site
+[2022-04-05 20:18:16,850] Yermis-MacBook-Pro.local/ERROR/locust.user.task: [Errno Expecting value] : 0
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 309, in run
+    self.execute_next_task()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 334, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 444, in execute_task
+    task(self.user).run()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 294, in run
+    self.on_start()
+  File "/Users/yermi/own/own_repos/locust-udemy/locustfiles/03_load_testing_environments/04_basic_logging.py", line 22, in on_start
+    resp = user_resp.json() # Convert JSON response into a dictionary
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+[2022-04-05 20:18:18,119] Yermis-MacBook-Pro.local/INFO/locust.main: Shutting down (exit code 1)
+[2022-04-05 20:21:04,507] Yermis-MacBook-Pro.local/INFO/locust.main: Starting web interface at http://0.0.0.0:8089 (accepting connections from all network interfaces)
+[2022-04-05 20:21:04,517] Yermis-MacBook-Pro.local/INFO/locust.main: Starting Locust 2.8.2
+[2022-04-05 20:21:11,852] Yermis-MacBook-Pro.local/INFO/locust.runners: Ramping to 1 users at a rate of 1.00 per second
+[2022-04-05 20:21:11,853] Yermis-MacBook-Pro.local/INFO/locust.runners: All users spawned: {"MyUser": 1} (1 total users)
+[2022-04-05 20:21:11,864] Yermis-MacBook-Pro.local/ERROR/locust.user.task: [Errno Expecting value] : 0
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 309, in run
+    self.execute_next_task()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 334, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 444, in execute_task
+    task(self.user).run()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 294, in run
+    self.on_start()
+  File "/Users/yermi/own/own_repos/locust-udemy/locustfiles/03_load_testing_environments/04_basic_logging.py", line 22, in on_start
+    resp = user_resp.json() # Convert JSON response into a dictionary
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+[2022-04-05 20:21:15,612] Yermis-MacBook-Pro.local/ERROR/locust.user.task: [Errno Expecting value] : 0
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 309, in run
+    self.execute_next_task()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 334, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 444, in execute_task
+    task(self.user).run()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 294, in run
+    self.on_start()
+  File "/Users/yermi/own/own_repos/locust-udemy/locustfiles/03_load_testing_environments/04_basic_logging.py", line 22, in on_start
+    resp = user_resp.json() # Convert JSON response into a dictionary
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+[2022-04-05 20:21:20,120] Yermis-MacBook-Pro.local/ERROR/locust.user.task: [Errno Expecting value] : 0
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 309, in run
+    self.execute_next_task()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 334, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 444, in execute_task
+    task(self.user).run()
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/locust/user/task.py", line 294, in run
+    self.on_start()
+  File "/Users/yermi/own/own_repos/locust-udemy/locustfiles/03_load_testing_environments/04_basic_logging.py", line 22, in on_start
+    resp = user_resp.json() # Convert JSON response into a dictionary
+  File "/Users/yermi/virtualenvs/locust/lib/python3.8/site-packages/requests/models.py", line 917, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: [Errno Expecting value] : 0
+
+[2022-04-05 20:21:23,088] Yermis-MacBook-Pro.local/INFO/locust.main: Shutting down (exit code 1)
+[2022-04-05 20:26:15,956] Yermis-MacBook-Pro.local/INFO/locust.main: Starting web interface at http://0.0.0.0:8089 (accepting connections from all network interfaces)
+[2022-04-05 20:26:15,970] Yermis-MacBook-Pro.local/INFO/locust.main: Starting Locust 2.8.2
+[2022-04-05 20:26:31,855] Yermis-MacBook-Pro.local/INFO/locust.runners: Ramping to 1 users at a rate of 1.00 per second
+[2022-04-05 20:26:31,855] Yermis-MacBook-Pro.local/INFO/locust.runners: All users spawned: {"MyUser": 1} (1 total users)
+[2022-04-05 20:26:31,855] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Logged into Library Web site
+[2022-04-05 20:26:31,983] Yermis-MacBook-Pro.local/INFO/04_basic_logging: {
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+}
+[2022-04-05 20:26:31,983] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Request was successful
+[2022-04-05 20:26:31,984] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Update comment
+[2022-04-05 20:26:32,373] Yermis-MacBook-Pro.local/CRITICAL/04_basic_logging: Request failed
+[2022-04-05 20:26:32,373] Yermis-MacBook-Pro.local/INFO/04_basic_logging: verify with catch response that select flight is successful
+[2022-04-05 20:26:36,130] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Get all the posts by current user
+[2022-04-05 20:26:36,150] Yermis-MacBook-Pro.local/INFO/04_basic_logging: add new post with a concecutive id
+[2022-04-05 20:26:36,449] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Request was successful
+[2022-04-05 20:26:39,780] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Update comment
+[2022-04-05 20:26:39,995] Yermis-MacBook-Pro.local/CRITICAL/04_basic_logging: Request failed
+[2022-04-05 20:26:39,996] Yermis-MacBook-Pro.local/INFO/04_basic_logging: verify with catch response that select flight is successful
+[2022-04-05 20:26:42,365] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Get all the posts by current user
+[2022-04-05 20:26:42,388] Yermis-MacBook-Pro.local/INFO/04_basic_logging: add new post with a concecutive id
+[2022-04-05 20:26:42,605] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Request was successful
+[2022-04-05 20:26:46,968] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Get all the posts by current user
+[2022-04-05 20:26:46,985] Yermis-MacBook-Pro.local/INFO/04_basic_logging: add new post with a concecutive id
+[2022-04-05 20:26:47,307] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Request was successful
+[2022-04-05 20:26:49,429] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Get all the posts by current user
+[2022-04-05 20:26:49,452] Yermis-MacBook-Pro.local/INFO/04_basic_logging: add new post with a concecutive id
+[2022-04-05 20:26:49,866] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Request was successful
+[2022-04-05 20:26:52,506] Yermis-MacBook-Pro.local/INFO/04_basic_logging: Get all the posts by current user
+[2022-04-05 20:26:52,524] Yermis-MacBook-Pro.local/INFO/04_basic_logging: add new post with a concecutive id
+[2022-04-05 20:26:52,586] Yermis-MacBook-Pro.local/INFO/locust.main: Shutting down (exit code 1)

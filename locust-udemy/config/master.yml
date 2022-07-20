@@ -1,0 +1,12 @@
+[locust run]
+host: https://google.com
+locustfile: locustfiles/02-http_requests/01_basic_http_get_post.py
+
+[locust master mode]
+master: true
+expect-workers: 2
+
+[headless mode]
+headless: true
+users: 3
+run-time: 20s
