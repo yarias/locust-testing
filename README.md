@@ -1,3 +1,0 @@
-# locust-testing
-
-Tutorial 
